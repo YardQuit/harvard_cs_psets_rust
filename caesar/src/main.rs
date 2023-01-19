@@ -46,10 +46,10 @@ fn get_cipher(text: &str, key: u32) -> String {
 
     for char in text.chars() {
         if char.is_ascii_lowercase() {
-            let calc = ((char as u8 - 97) + key as u8) % 26;
+            let calc = ((char as u32 - 97) + key) % 26;
             cipher_text.push(lower_az[calc as usize]);
         } else if char.is_ascii_uppercase() {
-            let calc = ((char as u8 - 65) + key as u8) % 26;
+            let calc = ((char as u32 - 65) + key) % 26;
             cipher_text.push(upper_az[calc as usize]);
         } else {
             cipher_text.push(char);
