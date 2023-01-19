@@ -3,7 +3,7 @@ use std::io::{self, Write};
 
 fn main() {
     let key: u32 = get_key();
-    let text = get_text();
+    let text: String = get_text();
     println!("ciphertext: {}", get_cipher(&text, key));
 }
 
