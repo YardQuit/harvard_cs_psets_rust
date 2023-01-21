@@ -12,7 +12,7 @@ fn get_text() -> String {
     io::stdin()
         .read_line(&mut prompt)
         .expect("error: failed to read from stdin");
-    prompt.to_string()
+    prompt.trim().to_string()
 }
 
 fn get_bulbs(text: &str) -> String {
