@@ -23,8 +23,8 @@ fn get_bulbs(text: &str) -> String {
 
     for b in binary {
         let binary_raw = format!("{:08b}", b);
-        let binary_zero = binary_raw.replace("0", zero_emoji);
-        let binary_zero_one = binary_zero.replace("1", one_emoji);
+        let binary_zero = binary_raw.replace('0', zero_emoji);
+        let binary_zero_one = binary_zero.replace('1', one_emoji);
         bulbs = format!("{}\n{}", bulbs, binary_zero_one);
     }
     bulbs
